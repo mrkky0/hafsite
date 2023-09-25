@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  {% include 'header.html' %}
+
+  {% block content %}
+
+  {% endblock %}
+ 
+
+
+  
+
+
+ 
+
+ 
+
+
+
+  <!-- Team Start -->
+  <div class="container-xxl py-5">
+      <div class="container">
+ 
+
+          <div class="row g-4">
+
+
+              
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+
+                      <div class="col-lg-3" data-wow-delay="0.5s">
+                        <div class="overflow-hidden">
+      
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{{data.product_url}}" alt="No image">
+                            </div>
+                            
+                            
+                        </div>
+                        <br>
+                        <h5>PRODUCT_NAME</h5>
+                      </div>
+
+                      
+
+                    </th>
+                    <th scope="col">VALS</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                   <!-- get des val count end return the des variables -->
+
+                  <tr>
+                    <th scope="row">DES_1</th>
+                    <td>VAL_1</td>
+                  </tr>
+
+                   <!-- get des val count end return the des variables -->
+
+ 
+          
+                </tbody>
+              </table>
+
+
+
+ 
+
+
+          </div>
+      </div>
+  </div>
+  <!-- Team End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  {% include 'footer.html' %}
+
+  {% block foot_content %}
+
+  {% endblock %}
+</html>

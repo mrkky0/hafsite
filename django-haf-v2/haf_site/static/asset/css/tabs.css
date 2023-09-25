@@ -1,0 +1,67 @@
+body {
+  font-family: Arial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  float: left;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #00a372;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #008854;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  background-color: #ffffff;
+  /* Arkaplan rengi */
+  padding: 20px;
+  /* İçerik içi boşluğu */
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  /* Köşe yuvarlaması sadece alt tarafta */
+  box-shadow: 0px 2px 4px rgba(43, 43, 43, 0.1);
+  /* Hafif gölge efekti */
+}
+
+
+/* Aktif menü stilini burada tanımlayabilirsiniz */
+.active-menu {
+  background-color: #00e713;
+  /* Aktif menünün arka plan rengi */
+  color: #000;
+  /* Aktif menünün metin rengi */
+  /* Diğer stil ayarlarını ekleyebilirsiniz */
+}
+
+/* Özel bir sınıfı tanımla ve arka plan resmini belirle */
+.background-image {
+  background-image: url("sdasa");
+  background-size: cover; /* Resmi öğeye sığacak şekilde ayarla */
+  background-position: center; /* Resmi ortala */
+  background-repeat: no-repeat; /* Resmi yineleme */
+  /* İsteğe bağlı olarak diğer stil özelliklerini burada ekleyebilirsiniz */
+}

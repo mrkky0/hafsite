@@ -1,0 +1,17 @@
+<!-- arama.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arama Sonuçları</title>
+</head>
+<body>
+
+  <form class="d-flex" role="search" method="GET" >
+    <input class="form-control me-2" type="search" placeholder="Searchs" aria-label="Search" name="q">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  {% for item in products_data  %}{{item}} <br>{% endfor %}
+   
+
+</body>
+</html>

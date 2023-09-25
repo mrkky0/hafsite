@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  {% include 'header.html' %}
+
+  {% block content %}
+
+  {% endblock %}
+
+  <br />
+  <br />
+
+  <meta name="viewport" content="width=device-center, initial-scale=1" />
+  <!-- Feature Start -->
+
+  <div class="container-fluid bg-gray overflow-hidden">
+    <div class="container-fluid feature">
+      <div class="row text-center">
+        <div class="col-lg-12" data-wow-delay="0.1s">
+          <!-- css yolu css/tabs.css -->
+
+          <div class="col-lg-12">
+            <div class="container-fluid">
+              <div class="tab h-50 bg-light rounded align-items-center p-1 col-12">
+                <div class="container mb-5">
+                  <br /><br />
+
+                  <form class="d-flex col-lg-10 float-right" role="search" method="GET">
+                    <input class="form-control me-6" type="search" placeholder="Searchs" aria-label="Search" name="q" />
+                    <button class="btn btn-outline-success" type="submit"><span class="mx-3"><i class="bi bi-search"></i></span></button><br />
+                    <a class="btn btn-success d-flex align-items-center justify-content-center btn-lg" href="/products?q=All" role="button"><span class="mx-2">All</span></a>
+                    
+                  </form>
+                   
+
+                  {% for category_item in category %}
+                     
+ 
+               
+                  {% endfor %}
+                </div>
+              </div>
+              <div id="All" class="tabcontent">
+                <div class="container-fluid">
+                  <div class="row">
+                    {% for item in data_list%}
+                      <div class="col-lg-2 col-md-3 wow fadeInUp mb-2" data-wow-delay="0.1s" id="{{ item.product_category }}">
+                        <div class="team-item position-relative rounded">
+                          <div class="overflow-hidden">
+                            <img class="img-fluid" src="{{ item.product_url }}" alt="No image" />
+                          </div>
+                          <div class="team-text bg-light text-center p-4">
+                            <p class="text-success text-center">{{ item.product_name }}DES_1</p>
+
+                            <div class="team-social text-center">
+                              <a class="btn btn-success small" href="{% url 'detail' item.id %}" role="button">Product Details</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+              {% for category_item in category %}
+                <div id="{{ category_item.id }}" class="tabcontent">
+                  <div class="row mb-2">
+                    <br /><br />
+                    {% for item in data %}
+                      {% if category_item.product_category == item.product_category %}
+                        <div class="col-lg-2 col-md-3 wow fadeInUp mb-2" data-wow-delay="0.1s" id="{{ item.product_category }}">
+                          <div class="team-item position-relative rounded">
+                            <div class="overflow-hidden">
+                              <img class="img-fluid" src="{{ item.product_url }}" alt="No image" />
+                            </div>
+                            <div class="team-text bg-light text-center p-4">
+                              <p class="text-success">{{ item.product_name }}</p>
+                              <div class="team-social text-center">
+                                <a class="btn btn-success small" href="{% url 'detail' item.id %}" role="button">Product Details</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Feature End -->
+
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <!-- Team End -->
+
+  {% include 'footer.html' %}
+
+  {% block foot_content %}
+
+  {% endblock %}
+</html>
